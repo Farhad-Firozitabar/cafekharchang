@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+    <html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mr. Crab Cafe Menu</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body class="bg-gray-100 font-VazirMatn">
+
+        <!-- Notification at top -->
+        <div id="notification" class="hidden fixed top-0 left-0 w-full bg-green-500 text-white text-center p-2 z-50"></div>
+
+        <!-- Header -->
+        <header class="bg-white text-center p-4 shadow-md relative">
+            <!-- Contact and Social Media Info -->
+            <div class="flex justify-between items-center px-4">
+                <div class="flex items-center space-x-2">
+                <a target="_blank" href="https://instagram.com/caffecrab"> <img src="./instagram-logo.webp" alt="Instagram" class="w-6 h-6">
+                </a>
+                </div>
+                <a href="tel:09304334303" class="text-black">📞 09304334303</a> <!-- Updated phone number with tel link -->
+            </div>
+            <div class="mt-2">
+                <p>ساعت کاری: 9 صبح الی 1 شب</p>
+                <p>پاسداران 15، بابلسر، مازندران، ایران</p>
+            </div>
+            <!-- Logo and Menu Title -->
+            <img src="./logo.png" alt="Mr. Crab Logo" class="w-24 h-24 mx-auto mt-4">
+            <h1 class="text-3xl font-bold text-red-600 mt-2">منوی آقای خرچنگ</h1>
+        </header>
+        
+
+        <!-- Search Bar -->
+        <div class="p-4">
+            <input id="search" type="text" placeholder="نام آیتم را جستجو کنید..." class="w-full p-2 border border-gray-300 rounded-md">
+        </div>
+
+        <!-- Section Navigation for Item Types -->
+        <nav id="section-buttons" class="p-4 space-y-2 transition-all duration-300">
+            <button class="section-btn" onclick="showSection('all')">همه</button>
+            <button class="section-btn" onclick="showSection('sandwiches')">ساندویچ‌ها</button>
+            <button class="section-btn" onclick="showSection('hot-drinks')">نوشیدنی‌های گرم</button>
+            <button class="section-btn" onclick="showSection('tea')">چای و دمنوش</button>
+            <button class="section-btn" onclick="showSection('cold-drinks')">بار سرد</button>
+            <button class="section-btn" onclick="showSection('breakfast')">منوی صبحانه</button>
+        </nav>
+        <button id="filter-button" class="hidden p-2 bg-yellow-500 text-black rounded-md mx-4 w-11/12 block">فیلتر ها</button>
+
+        <!-- Menu Section -->
+        <section id="menu-content" class="p-4">
+            <div id="all" class="menu-section">
+                <h2 class="text-2xl font-bold mb-4 text-red-500">همه</h2>
+            </div>
+
+            <div id="sandwiches" class="menu-section hidden">
+                <h2 class="text-2xl font-bold mb-4 text-red-500">ساندویچ‌ها</h2>
+                <ul id="sandwiches-list" class="space-y-2"></ul>
+            </div>
+
+            <div id="hot-drinks" class="menu-section hidden">
+                <h2 class="text-2xl font-bold mb-4 text-red-500">نوشیدنی‌های گرم</h2>
+                <ul id="hot-drinks-list" class="space-y-2"></ul>
+            </div>
+
+            <div id="tea" class="menu-section hidden">
+                <h2 class="text-2xl font-bold mb-4 text-red-500">چای و دمنوش</h2>
+                <ul id="tea-list" class="space-y-2"></ul>
+            </div>
+
+            <div id="cold-drinks" class="menu-section hidden">
+                <h2 class="text-2xl font-bold mb-4 text-red-500">بار سرد</h2>
+                <ul id="cold-drinks-list" class="space-y-2"></ul>
+            </div>
+
+            <div id="breakfast" class="menu-section hidden">
+                <h2 class="text-2xl font-bold mb-4 text-red-500">منوی صبحانه</h2>
+                <ul id="breakfast-list" class="space-y-2"></ul>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
