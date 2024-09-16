@@ -12,7 +12,7 @@ async function loadMenuData() {
     loadAllSection(data);
 
     // Display notification when the menu is fully loaded
-    showNotification('منو با موفقیت بارگذاری شد.');
+    showNotification('به کافه آقای خرچنگ خوش اومدید!');
 }
 
 // Function to load a specific section
