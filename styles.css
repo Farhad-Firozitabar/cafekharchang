@@ -1,44 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap");
-
 body {
   font-family: "Vazirmatn", sans-serif;
+  background-color: #a8e4ff;
+  color: #333;
 }
-
+.underwater-bg {
+  background-image: url("https://via.placeholder.com/1200x800/a8e4ff/ffffff?text=Underwater+Background");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.krusty-krab-sign {
+  background-color: #f7d794;
+  border: 8px solid #e17055;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .menu-section {
   max-width: 600px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .menu-item {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 4px;
+  border-bottom: 2px dashed #e17055;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
   font-size: 1.25rem;
 }
-
 .menu-item span:last-child {
-  color: #000; /* Black price */
+  color: #2d3436;
   font-weight: bold;
 }
-
 .section-btn {
   display: block;
   width: 100%;
-  background-color: #fbbf24;
-  color: #000;
+  background-color: #ffeaa7;
+  color: #2d3436;
   padding: 12px;
   border-radius: 8px;
   text-align: center;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 2px solid #fdcb6e;
 }
-
 .section-btn:hover {
-  background-color: #f59e0b;
+  background-color: #fdcb6e;
 }
-
 .hidden {
   display: none;
 }
