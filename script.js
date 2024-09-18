@@ -1,3 +1,22 @@
+// Function to convert numbers to Persian digits
+function toPersianNumber(number) {
+    const persianNumbers = {
+        0: '۰',
+        1: '۱',
+        2: '۲',
+        3: '۳',
+        4: '۴',
+        5: '۵',
+        6: '۶',
+        7: '۷',
+        8: '۸',
+        9: '۹'
+    };
+    return number.toString().replace(/[0-9]/g, function(digit) {
+        return persianNumbers[digit];
+    });
+}
+
 // Function to load and display the menu data
 async function loadMenuData() {
     const response = await fetch('menu.json');
@@ -12,7 +31,7 @@ async function loadMenuData() {
     loadAllSection(data);
 
     // Display notification when the menu is fully loaded
-    showNotification('به کافه آقای خرچنگ خوش اومدید!');
+    showNotification('منو با موفقیت بارگذاری شد.');
 }
 
 // Function to load a specific section
@@ -21,7 +40,7 @@ function loadSection(section, items) {
     items.forEach(item => {
         const li = document.createElement('li');
         li.classList.add('menu-item');
-        li.innerHTML = `<span>${item.name}</span><span>${item.price} تومان</span>`;
+        li.innerHTML = `<span>${item.name}</span><span>${toPersianNumber(item.price)} تومان</span>`;
         sectionList.appendChild(li);
     });
 }
@@ -43,7 +62,7 @@ function loadAllSection(data) {
         data[section].forEach(item => {
             const li = document.createElement('li');
             li.classList.add('menu-item');
-            li.innerHTML = `<span>${item.name}</span><span>${item.price} تومان</span>`;
+            li.innerHTML = `<span>${item.name}</span><span>${toPersianNumber(item.price)} تومان</span>`;
             ul.appendChild(li);
         });
 
