@@ -7,7 +7,35 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        
+        <style>
+            /* Add styles to apply the background image */
+            header {
+                background-image: url('./KrustyKrabStock.webp');
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                color: white;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+            }
+    
+            /* Add overlay to make text more visible */
+            header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+                z-index: 1;
+            }
+    
+            /* Ensure content appears on top of overlay */
+            .header-content {
+                position: relative;
+                z-index: 2;
+            }
+        </style>
     </head>
     <body class="bg-gray-100 font-VazirMatn">
 
@@ -15,23 +43,27 @@
         <div id="notification" class="hidden fixed top-0 left-0 w-full bg-green-500 text-white text-center p-2 z-50"></div>
 
         <!-- Header -->
-        <header class="bg-white text-center p-4 shadow-md relative">
-            <!-- Contact and Social Media Info -->
-            <div class="flex justify-between items-center px-4">
-                <div class="flex items-center space-x-2">
-                <a target="_blank" href="https://instagram.com/caffecrab"> <img src="./instagram-logo.webp" alt="Instagram" class="w-6 h-6">
+ <!-- Header with background image -->
+ <header class="bg-white text-center p-4 shadow-md relative py-12">
+    <div class="header-content">
+        <!-- Contact and Social Media Info -->
+        <div class="flex justify-between items-center px-4">
+            <div class="flex items-center space-x-2">
+                <a target="_blank" href="https://instagram.com/caffecrab">
+                    <img src="./instagram-logo.webp" alt="Instagram" class="w-6 h-6">
                 </a>
-                </div>
-                <a href="tel:09304334303" class="text-black">📞 09304334303</a> <!-- Updated phone number with tel link -->
             </div>
-            <div class="mt-2">
-                <p> ساعت کاری: 8 صبح تا 2 صبح</p>
-                <p>پاسداران 15، بابلسر، مازندران، ایران</p>
-            </div>
-            <!-- Logo and Menu Title -->
-            <img src="./logo.png" alt="Mr. Crab Logo" class="w-24 h-24 mx-auto mt-4">
-            <h1 class="text-3xl font-bold text-red-600 mt-2">منوی آقای خرچنگ</h1>
-        </header>
+            <a href="tel:09304334303" class="text-white">📞 09304334303</a>
+        </div>
+        <div class="mt-2">
+            <p>ساعت کاری: 9 صبح الی 1 شب</p>
+            <p>پاسداران 15، بابلسر، مازندران، ایران</p>
+        </div>
+        <!-- Logo and Menu Title -->
+        <img src="./logo.png" alt="Mr. Crab Logo" class="w-24 h-24 mx-auto mt-4">
+        <h1 class="text-3xl font-bold mt-2">منوی آقای خرچنگ</h1>
+    </div>
+</header>
         
 
         <!-- Search Bar -->
